@@ -8,12 +8,15 @@
   </div>
 
   <div v-if="post">
-    <div class="post__header">
-      <h1>
-        {{post.title}}
-      </h1>
-      <span>{{post.author.name}}</span>
+    <div class="banner" v-bind:style="{ background: 'url(' + post.imageUrl + ')'}">
+      <div class="container">
+        <h1>{{post.title}}</h1>
+      </div>
     </div>
-    <img v-if="post.imageUrl" v-bind:src="post.imageUrl + '?w=480'" />
+    <div class="container">
+      <h2 class="heading">{{post.title}}</h2>
+      <p>{{post.content}}</p>
+    </div>
+
   </div>
 </div>

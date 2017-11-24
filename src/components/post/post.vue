@@ -3,8 +3,9 @@
 import sanity from '../../sanity'
 
 const query = `*[_type == "post" && _id == $id] {
+  _createdAt,
   _id,
-  author,
+  author ->{name},
   "imageUrl": cover.asset->url,
   content,
   title,
