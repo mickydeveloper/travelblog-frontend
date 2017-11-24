@@ -1,12 +1,24 @@
 .banner {
   height         : 60vh;
-  min-height     : 25rem;
+  min-height     : 28rem;
   display        : flex;
   justify-content: flex-start;
   align-items    : flex-end;
   margin-bottom  : 3rem;
   background-size: cover!important;
   padding        : 1rem 0;
+  @include respond-to(small-down) {
+    margin-bottom: 1rem;
+  }
+  overflow       : hidden;
+  position       : relative;
+
+  a {
+    position: absolute;
+    width   : 100%;
+    top     : 0;
+    height  : 100%;
+  }
 
   h1 {
     background: $primary;

@@ -9,6 +9,14 @@
     display        : flex;
     justify-content: center;
     align-items    : center;
+    @include respond-to(extra-small) {
+      max-height: 13.5rem;
+
+      img {
+        height: 100%;
+        width : auto;
+      }
+    }
   }
 
   a:hover h6 {

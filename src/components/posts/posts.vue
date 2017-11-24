@@ -2,7 +2,7 @@
 <script>
 import sanity from '../../sanity'
 
-const query = `*[_type == "post"] {
+const query = `*[_type == "post"] | order(_createdAt desc) {
   _createdAt,
   _id,
   author ->{name},
