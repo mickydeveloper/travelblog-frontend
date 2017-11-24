@@ -31,6 +31,7 @@ export default {
 <style lang="scss" scoped>
 nav{
   font-weight: bold;
+  margin-bottom: 1rem;
   img{
     width: 13rem;
 

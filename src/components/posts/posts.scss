@@ -1,4 +1,32 @@
-.posts-list__directed-by {
-  display: block;
-  font-size: 1rem;
+.banner {
+  height         : 40vh;
+  min-height     : 25rem;
+  display        : flex;
+  justify-content: flex-start;
+  align-items    : flex-end;
+  margin-bottom  : 1.5rem;
+  background-size: cover!important;
+  padding        : 1rem;
+  @include respond-to(small-down) {
+    padding: 0.5rem;
+  }
+
+  h1 {
+    font-weight: 600;
+    background : $primary;
+    padding    : 0.5rem;
+    width      : auto;
+    max-width  : 23vw;
+    margin     : 0;
+    color      : $gray-0;
+    @include respond-to(large-down) {
+      max-width: 40vw;
+    }
+    @include respond-to(medium-down) {
+      max-width: 50vw;
+    }
+    @include respond-to(small-down) {
+      max-width: 70vw;
+    }
+  }
 }

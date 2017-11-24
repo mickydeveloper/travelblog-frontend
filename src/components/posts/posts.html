@@ -6,6 +6,13 @@
   <div v-if="error" class="error">
     {{ error }}
   </div>
+
+  <div v-if="posts[0]" class="banner" v-bind:style="{ background: 'url(' + posts[0].imageUrl + ')'}">
+    <router-link :to="{name: 'post', params: {id: posts[0]._id}}">
+      <h1>{{posts[0].title}}</h1>
+    </router-link>
+  </div>
+
   <ul class="list">
     <li v-for="post in posts" class="list__item">
       <router-link :to="{name: 'post', params: {id: post._id}}">
