@@ -1,0 +1,17 @@
+<div>
+  <div class="loading" v-if="loading">
+    Loading...
+  </div>
+
+  <div v-if="error" class="error">
+    {{ error }}
+  </div>
+  <ul class="list">
+    <li v-for="post in posts" class="list__item">
+      <router-link :to="{name: 'post', params: {id: post._id}}">
+        <img v-if="post.imageUrl" v-bind:src="post.imageUrl + '?w=100'" />
+        <h2>{{post.title}}</h2>
+      </router-link>
+    </li>
+  </ul>
+</div>

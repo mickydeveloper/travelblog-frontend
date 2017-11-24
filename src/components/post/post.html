@@ -1,0 +1,19 @@
+<div class="post">
+  <div class="loading" v-if="loading">
+    Loading...
+  </div>
+
+  <div v-if="error" class="error">
+    {{ error }}
+  </div>
+
+  <div v-if="post">
+    <div class="post__header">
+      <h1>
+        {{post.title}}
+      </h1>
+      <span>{{post.author.name}}</span>
+    </div>
+    <img v-if="post.imageUrl" v-bind:src="post.imageUrl + '?w=480'" />
+  </div>
+</div>

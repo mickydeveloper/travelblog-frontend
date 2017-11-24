@@ -1,0 +1,13 @@
+@import "~bootstrap/scss/bootstrap";
+
+#app {
+  color      : $primary;
+  padding-top: 2rem;
+}
+
+.loading {
+  position : fixed;
+  top      : 50%;
+  left     : 50%;
+  transform: translate(-50%, -50%);
+}
