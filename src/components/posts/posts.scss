@@ -6,19 +6,15 @@
   align-items    : flex-end;
   margin-bottom  : 3rem;
   background-size: cover!important;
-  padding        : 1rem;
-  @include respond-to(small-down) {
-    padding: 0.5rem;
-  }
+  padding        : 1rem 0;
 
   h1 {
-    font-weight: 600;
-    background : $primary;
-    padding    : 0.5rem;
-    width      : auto;
-    max-width  : 23vw;
-    margin     : 0;
-    color      : $gray-0;
+    background: $primary;
+    padding   : 0.5rem;
+    width     : auto;
+    max-width : 23vw;
+    margin    : 0;
+    color     : $gray-0;
     @include respond-to(large-down) {
       max-width: 40vw;
     }
@@ -27,6 +23,11 @@
     }
     @include respond-to(small-down) {
       max-width: 70vw;
+    }
+  }
+  @include respond-to(extra-small) {
+    .container {
+      margin: 0;
     }
   }
 }
@@ -40,5 +41,26 @@
     display        : flex;
     justify-content: center;
     align-items    : center;
+  }
+
+  a:hover h6 {
+    color: $primary;
+  }
+
+  .content {
+    padding-top: 1rem;
+  }
+
+  h6 {
+    opacity   : 0.5;
+    margin-top: 0.5rem;
+
+    span {
+      font-weight: normal;
+    }
+  }
+
+  h2 {
+    margin: 0.5rem 0;
   }
 }

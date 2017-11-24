@@ -3,8 +3,9 @@
 import sanity from '../../sanity'
 
 const query = `*[_type == "post"] {
+  _createdAt,
   _id,
-  author,
+  author ->{name},
   "imageUrl": cover.asset->url,
   content,
   title,
@@ -34,6 +35,13 @@ export default {
       }, error => {
         this.error = error
       })
+    },
+    parseDate (datestring) {
+      var d = new Date(datestring)
+      var currDate = d.getDate()
+      var currMonth = d.getMonth()
+      var currYear = d.getFullYear()
+      return (currDate + '-' + currMonth + '-' + currYear)
     }
   }
 }
