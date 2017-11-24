@@ -7,26 +7,37 @@
     {{ error }}
   </div>
 
-  <div v-if="posts[0]" class="banner" v-bind:style="{ background: 'url(' + posts[0].imageUrl + ')'}">
+  <div v-if="posts[randomPost]" class="banner" v-bind:style="{ background: 'url(' + posts[randomPost].imageUrl + ')'}">
     <div class="container">
-      <h1>{{posts[0].title}}</h1>
+      <h1>What I have been up to lately</h1>
     </div>
-    <router-link :to="{name: 'post', params: {id: posts[0]._id}}">
-    </router-link>
   </div>
   <div class="container">
     <div class="row">
-      <div class="col-12 col-md-8 col-lg-7">
-        <div class="post" v-for="post in posts" v-if="post!==posts[0]">
-          <router-link :to="{name: 'post', params: {id: post._id}}">
-            <div class="img-wrapper">
-              <img class="img-fluid" v-if="post.imageUrl" v-bind:src="post.imageUrl + '?w=660'" />
-            </div>
-            <div class="content">
-              <h2>{{post.title}}</h2>
-              <h6><span>Posted</span> {{parseDate(post._createdAt)}}</h6>
-            </div>
-          </router-link>
+      <div class="col-12 col-md-7 col-lg-8">
+        <div class="row">
+          <div class="post col-12" v-for="post in posts" v-if="post===posts[0]">
+            <router-link :to="{name: 'post', params: {id: post._id}}">
+              <div class="img-wrapper big">
+                <img v-if="post.imageUrl" v-bind:src="post.imageUrl + '?w=800'" />
+              </div>
+              <div class="content">
+                <h2>{{post.title}}</h2>
+                <h6><span>Posted</span> {{parseDate(post._createdAt)}}</h6>
+              </div>
+            </router-link>
+          </div>
+          <div class="post col-12 col-md-12 col-lg-6" v-for="post in posts" v-if="post!==posts[0]">
+            <router-link :to="{name: 'post', params: {id: post._id}}">
+              <div class="img-wrapper">
+                <img v-if="post.imageUrl" v-bind:src="post.imageUrl + '?w=660'" />
+              </div>
+              <div class="content">
+                <h2>{{post.title}}</h2>
+                <h6><span>Posted</span> {{parseDate(post._createdAt)}}</h6>
+              </div>
+            </router-link>
+          </div>
         </div>
       </div>
     </div>

@@ -16,6 +16,7 @@ export default {
   data () {
     return {
       loading: true,
+      randomPost: 0,
       posts: []
     }
   },
@@ -32,6 +33,8 @@ export default {
       sanity.fetch(query).then(posts => {
         this.loading = false
         this.posts = posts
+        this.randomPost = Math.floor(Math.random() * (this.posts.length - 1) + 1)
+        console.log(this.randomPost)
       }, error => {
         this.error = error
       })

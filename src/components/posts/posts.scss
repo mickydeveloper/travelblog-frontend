@@ -4,17 +4,23 @@
   margin-bottom: 3rem;
 
   .img-wrapper {
-    max-height     : 20rem;
+    max-height     : 14rem;
     overflow       : hidden;
     display        : flex;
     justify-content: center;
     align-items    : center;
+
+    &.big {
+      @include respond-to(medium-up) {
+        max-height: 25rem;
+      }
+    }
     @include respond-to(extra-small) {
       max-height: 13.5rem;
 
       img {
-        height: 100%;
-        width : auto;
+        height   : auto;
+        max-width: 150%;
       }
     }
   }
@@ -25,6 +31,9 @@
 
   .content {
     padding-top: 1rem;
+    @include respond-to(extra-small) {
+      padding-top: 0.5rem;
+    }
   }
 
   h6 {
