@@ -30,6 +30,7 @@ export default {
 
 <style lang="scss" scoped>
 nav{
+  font-weight: bold;
   img{
     width: 13rem;
 
@@ -50,5 +51,5 @@ nav{
 <!-- General Global Styles -->
 <style lang="scss">
 @import './style.scss';
-
+@import './assets/scss/font.scss';
 </style>
