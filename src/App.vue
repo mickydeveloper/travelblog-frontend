@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <div class="container">
       <nav>
+       <div class="container">
         <div class="row">
           <div class="col-6 d-flex">
             <router-link to="/">
@@ -14,12 +14,12 @@
             </router-link>
           </div>
         </div>
+        </div>
       </nav>
       <router-view />
       <footer>
       </footer>
     </div>
-  </div>
 </template>
 
 <script>
@@ -31,7 +31,8 @@ export default {
 <style lang="scss" scoped>
 nav{
   font-weight: bold;
-  margin-bottom: 1rem;
+  padding: 1rem 0;
+
   img{
     width: 13rem;
 
@@ -44,6 +45,8 @@ nav{
     justify-content: flex-end;
     a{
       margin-left: 1.5rem;
+      display: flex;
+      align-items: center;
     }
   }
 }

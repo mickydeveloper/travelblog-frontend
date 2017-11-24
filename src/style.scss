@@ -1,11 +1,7 @@
 @import "~bootstrap/scss/bootstrap";
 
 #app {
-  color      : $primary;
-  padding-top: 2rem;
-  @include respond-to(small-down) {
-    padding-top: 1.5rem;
-  }
+  color: $primary;
 }
 
 a {

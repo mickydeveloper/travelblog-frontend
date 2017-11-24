@@ -8,17 +8,25 @@
   </div>
 
   <div v-if="posts[0]" class="banner" v-bind:style="{ background: 'url(' + posts[0].imageUrl + ')'}">
-    <router-link :to="{name: 'post', params: {id: posts[0]._id}}">
-      <h1>{{posts[0].title}}</h1>
-    </router-link>
-  </div>
+    <div class="container">
+      <router-link :to="{name: 'post', params: {id: posts[0]._id}}">
 
-  <ul class="list">
-    <li v-for="post in posts" class="list__item">
-      <router-link :to="{name: 'post', params: {id: post._id}}">
-        <img v-if="post.imageUrl" v-bind:src="post.imageUrl + '?w=100'" />
-        <h2>{{post.title}}</h2>
+        <h1>{{posts[0].title}}</h1>
       </router-link>
-    </li>
-  </ul>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-8 col-lg-7">
+        <div class="post" v-for="post in posts">
+          <router-link :to="{name: 'post', params: {id: post._id}}">
+            <div class="img-wrapper">
+              <img class="img-fluid" v-if="post.imageUrl" v-bind:src="post.imageUrl + '?w=660'" />
+            </div>
+            <h2>{{post.title}}</h2>
+          </router-link>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
