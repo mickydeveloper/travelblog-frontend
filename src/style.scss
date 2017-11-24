@@ -3,6 +3,19 @@
 #app {
   color      : $primary;
   padding-top: 2rem;
+  @include respond-to(small-down) {
+    padding-top: 1.5rem;
+  }
+}
+
+a {
+  color: $primary;
+
+  &:active,
+  &:focus,
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 .loading {
