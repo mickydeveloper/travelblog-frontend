@@ -18,6 +18,16 @@
       </nav>
       <router-view />
       <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col-6">
+              ©2017 Mikolaj Hyzy
+            </div>
+            <div class="col-6 text-right">
+              <span><a href="https://www.instagram.com/mikolajhyzy/?hl=en" target="_blank">Instagram <i class="fa fa-instagram" aria-hidden="true"></i></a></span>
+            </div>
+          </div>
+        </div>
       </footer>
     </div>
 </template>
@@ -49,6 +59,10 @@ nav{
       align-items: center;
     }
   }
+}
+
+footer{
+  padding: 1rem 0;
 }
 </style>
 

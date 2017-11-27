@@ -4,12 +4,13 @@ import sanity from '../../sanity'
 
 const query = `*[_type == "about"] | order(_createdAt desc) {
   _id,
-  "profileImageUrl": profile.asset->url,
   content,
   title,
   "coverImageUrl": cover.asset->url,
   secondaryContent,
   secondaryTitle,
+  person -> {name,roles},
+  "profileImageUrl": person -> profile.asset -> url
 }[0]`
 
 export default {

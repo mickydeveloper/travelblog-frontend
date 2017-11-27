@@ -1,1 +1,45 @@
 @import "../../assets/scss/banner.scss";
+
+section {
+  margin-bottom: 2rem;
+}
+
+.profile-wrapper {
+  margin-right : 1rem;
+  margin-bottom: 2rem;
+  text-align   : center;
+
+  p {
+    margin: 0;
+  }
+
+  .profile {
+    max-width      : 10rem;
+    height         : 10rem;
+    background-size: cover!important;
+    border-radius  : 50%;
+    margin         : auto;
+  }
+
+  h5 {
+    margin: 1rem 0 0.1rem;
+  }
+  @include respond-to(small-down) {
+    text-align: left;
+
+    .profile {
+      max-width: 6rem;
+      height   : 6rem;
+    }
+
+    h5 {
+      margin: 0;
+    }
+
+    .profile-content {
+      display        : flex;
+      justify-content: center;
+      flex-direction : column;
+    }
+  }
+}
