@@ -33,7 +33,7 @@
               </div>
             </router-link>
           </div>
-          <div class="post col-12 col-md-12 col-lg-6" v-for="post in posts" v-if="post!==posts[0]" data-aos="fade-up" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="400" data-aos-once="true">
+          <div class="post col-12 col-md-12 col-lg-6" v-for="post in posts" v-if="post!==posts[0]" data-aos="fade-up" data-aos-offset="100" data-aos-easing="ease-in-sine" data-aos-duration="400" data-aos-once="true">
             <router-link :to="{name: 'post', params: {id: post._id}}">
               <div class="img-wrapper">
                 <img v-if="post.imageUrl" v-bind:src="post.imageUrl + '?w=660'" />

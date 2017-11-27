@@ -1,4 +1,4 @@
-<template src="./aboutWidget.html"></template>
+<template src="./about-widget.html"></template>
 <script>
 import sanity from '../../../sanity'
 
@@ -14,7 +14,7 @@ const query = `*[_type == "about"] | order(_createdAt desc) {
 }[0]`
 
 export default {
-  name: 'aboutWidget',
+  name: 'about-widget',
   data () {
     return {
       loading: true,
@@ -42,4 +42,4 @@ export default {
   }
 }
 </script>
-<style src="./aboutWidget.scss" lang="scss" scoped></style>
+<style src="./about-widget.scss" lang="scss" scoped></style>

@@ -25,11 +25,13 @@
           <p><span v-for="role in about.person.roles">{{role}}<span v-if="role !== about.person.roles[about.person.roles.length-1]">,  </span></span>
           </p>
           <div class="description d-block d-md-none">{{about.content.substring(0,95)}}...</div>
+          <h6 class="d-block d-md-none">Read more...</h6>
         </div>
       </div>
     </div>
     <section class="text-md-center">
       <p class="d-none d-md-block px-2">{{about.content.substring(0,330)}}...</p>
+      <h6 class="d-none d-md-block px-2">Read more...</h6>
     </section>
   </div>
 </div>

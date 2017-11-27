@@ -1,25 +1,18 @@
-<template src="./posts.html"></template>
+<template src="./related-posts.html"></template>
 <script>
-import sanity from '../../sanity'
-import aboutWidget from './about-widget/about-widget.vue'
-import * as AOS from 'aos/dist/aos'
+import sanity from '../../../sanity'
 
-const query = `*[_type == "post"] | order(_createdAt desc) {
+const query = `*[_type == "post"][0...4]{
   _createdAt,
   _id,
   author ->{name},
   "imageUrl": cover.asset->url,
   content,
   title,
-}[0...50]`
-
-AOS.init()
+}`
 
 export default {
-  name: 'posts',
-  components: {
-    'about-widget': aboutWidget
-  },
+  name: 'related-posts',
   data () {
     return {
       loading: true,
@@ -55,4 +48,4 @@ export default {
   }
 }
 </script>
-<style src="./posts.scss" lang="scss" scoped></style>
+<style src="./related-posts.scss" lang="scss" scoped></style>

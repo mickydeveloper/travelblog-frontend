@@ -1,6 +1,7 @@
 <template src="./post.html"></template>
 <script>
 import sanity from '../../sanity'
+import relatedPosts from './related-posts/related-posts.vue'
 
 const query = `*[_type == "post" && _id == $id] {
   _createdAt,
@@ -19,6 +20,9 @@ export default {
     }
   },
   name: 'post',
+  components: {
+    'related-posts': relatedPosts
+  },
   data () {
     return {
       loading: true,

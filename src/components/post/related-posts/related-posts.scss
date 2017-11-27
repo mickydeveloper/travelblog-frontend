@@ -1,0 +1,60 @@
+.related-posts {
+  margin-bottom: 2rem;
+
+  .post {
+    margin-bottom: 1.5rem;
+    transition   : all 0.4s ease-in-out;
+
+    &:hover {
+      box-shadow: 2px 5px 20px #e2e2e2;
+      transform : scale(1.1);
+    }
+
+    .v-middle {
+      display        : flex;
+      justify-content: center;
+      flex-direction : column;
+    }
+  }
+
+  h3 {
+    margin-bottom: 1.5rem;
+  }
+
+  .img-wrapper {
+    max-height     : 5.5rem;
+    overflow       : hidden;
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+    @include respond-to(extra-small) {
+      img {
+        height   : auto;
+        max-width: 250%;
+      }
+    }
+  }
+
+  a:hover h6 {
+    color: $primary;
+  }
+
+  h6 {
+    opacity   : 0.5;
+    margin-top: 0.5rem;
+
+    span {
+      font-weight: normal;
+    }
+  }
+  @include respond-to(small-down) {
+    h3 {
+      font-size: 1.5rem;
+    }
+
+    h5 {
+      font-size  : 1.2rem;
+      line-height: 1.2rem;
+    }
+  }
+}
