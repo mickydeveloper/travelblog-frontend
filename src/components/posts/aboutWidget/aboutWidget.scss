@@ -1,12 +1,9 @@
-@import "../../assets/scss/banner.scss";
-
 section {
   margin-bottom: 2rem;
 }
 
 .profile-wrapper {
-  margin-right : 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   text-align   : center;
 
   p {
@@ -44,6 +41,10 @@ section {
       display        : flex;
       justify-content: center;
       flex-direction : column;
+    }
+
+    .description {
+      font-size: 14px;
     }
   }
 }

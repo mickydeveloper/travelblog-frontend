@@ -15,21 +15,6 @@
     </div>
     <div class="container">
       <div class="row">
-        <div class="col-12 col-md-4 col-lg-3 order-last">
-          <div class="profile-wrapper">
-            <div class="row">
-              <div class="col-5 col-md-12">
-                <div class="profile" v-bind:style="{ background: 'url(' + about.profileImageUrl + ')' + 'no-repeat center center'}">
-                </div>
-              </div>
-              <div class="pl-0 pl-md-3 col-7 col-md-12 profile-content">
-                <h5>{{about.person.name}}</h5>
-                <p><span v-for="role in about.person.roles">{{role}}<span v-if="role !== about.person.roles[about.person.roles.length-1]">,  </span></span>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
         <div class="col-12 col-md-8 col-lg-9">
           <section>
             <h2>{{about.title}}</h2>
@@ -39,6 +24,21 @@
             <h2>{{about.secondaryTitle}}</h2>
             <p>{{about.secondaryContent}}</p>
           </section>
+        </div>
+        <div class="col-12 col-md-4 col-lg-3">
+          <div class="profile-wrapper">
+            <div class="row">
+              <div class="col-4 col-md-12">
+                <div class="profile" v-bind:style="{ background: 'url(' + about.profileImageUrl + ')' + 'no-repeat center center'}">
+                </div>
+              </div>
+              <div class="pl-0 pl-md-3 col-8 col-md-12 profile-content">
+                <h5>{{about.person.name}}</h5>
+                <p><span v-for="role in about.person.roles">{{role}}<span v-if="role !== about.person.roles[about.person.roles.length-1]">,  </span></span>
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

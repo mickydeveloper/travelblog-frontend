@@ -1,0 +1,29 @@
+<div class="about-widget">
+  <div class="loading" v-if="loading">
+    Loading...
+  </div>
+
+  <div v-if="error" class="error">
+    {{ error }}
+  </div>
+
+  <div v-if="about">
+    <div class="profile-wrapper">
+      <div class="row">
+        <div class="col-4 col-md-12">
+          <div class="profile" v-bind:style="{ background: 'url(' + about.profileImageUrl + ')' + 'no-repeat center center'}">
+          </div>
+        </div>
+        <div class="pl-0 pl-md-3 col-8 col-md-12 profile-content">
+          <h5>{{about.person.name}}</h5>
+          <p><span v-for="role in about.person.roles">{{role}}<span v-if="role !== about.person.roles[about.person.roles.length-1]">,  </span></span>
+          </p>
+          <div class="description d-block d-md-none">{{about.content.substring(0,95)}}...</div>
+        </div>
+      </div>
+    </div>
+    <section class="text-md-center">
+      <p class="d-none d-md-block px-2">{{about.content.substring(0,330)}}...</p>
+    </section>
+  </div>
+</div>

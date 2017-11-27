@@ -1,6 +1,7 @@
 <template src="./posts.html"></template>
 <script>
 import sanity from '../../sanity'
+import aboutWidget from './aboutWidget/aboutWidget.vue'
 
 const query = `*[_type == "post"] | order(_createdAt desc) {
   _createdAt,
@@ -13,6 +14,9 @@ const query = `*[_type == "post"] | order(_createdAt desc) {
 
 export default {
   name: 'posts',
+  components: {
+    'about-widget': aboutWidget
+  },
   data () {
     return {
       loading: true,
