@@ -1,50 +1,60 @@
-section {
-  margin-bottom: 2rem;
-}
+.about-widget {
+  padding   : 1rem;
+  transition: all 0.4s ease-in-out;
 
-.profile-wrapper {
-  margin-bottom: 1rem;
-  text-align   : center;
-
-  p {
-    margin: 0;
+  &:hover {
+    color     : $primary;
+    box-shadow: 2px 5px 20px #e2e2e2;
   }
 
-  .profile {
-    max-width      : 10rem;
-    height         : 10rem;
-    background-size: cover!important;
-    border-radius  : 50%;
-    margin         : auto;
+  section {
+    margin-bottom: 2rem;
   }
 
-  .profile-content p {
-    color: $secondary;
-  }
+  .profile-wrapper {
+    margin-bottom: 1rem;
+    text-align   : center;
 
-  h5 {
-    margin: 1rem 0 0.1rem;
-  }
-  @include respond-to(small-down) {
-    text-align: left;
-
-    .profile {
-      max-width: 5rem;
-      height   : 5rem;
-    }
-
-    h5 {
+    p {
       margin: 0;
     }
 
-    .profile-content {
-      display        : flex;
-      justify-content: center;
-      flex-direction : column;
+    .profile {
+      max-width      : 10rem;
+      height         : 10rem;
+      background-size: cover!important;
+      border-radius  : 50%;
+      margin         : auto;
     }
 
-    .description {
-      font-size: 14px;
+    .profile-content p {
+      color: $secondary;
+    }
+
+    h5 {
+      margin: 1rem 0 0.1rem;
+    }
+    @include respond-to(small-down) {
+      text-align: left;
+
+      .profile {
+        max-width: 5rem;
+        height   : 5rem;
+      }
+
+      h5 {
+        margin: 0;
+      }
+
+      .profile-content {
+        display        : flex;
+        justify-content: center;
+        flex-direction : column;
+      }
+
+      .description {
+        font-size: 14px;
+      }
     }
   }
 }

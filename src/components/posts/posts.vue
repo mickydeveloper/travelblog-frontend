@@ -2,6 +2,7 @@
 <script>
 import sanity from '../../sanity'
 import aboutWidget from './aboutWidget/aboutWidget.vue'
+import * as AOS from 'aos/dist/aos'
 
 const query = `*[_type == "post"] | order(_createdAt desc) {
   _createdAt,
@@ -11,6 +12,8 @@ const query = `*[_type == "post"] | order(_createdAt desc) {
   content,
   title,
 }[0...50]`
+
+AOS.init()
 
 export default {
   name: 'posts',
