@@ -9,8 +9,8 @@
             </router-link>
           </div>
           <div class="col-6 d-flex menu-links">
-            <router-link to="/posts">
-              Posts
+            <router-link to="/about">
+              About
             </router-link>
           </div>
         </div>

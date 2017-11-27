@@ -1,0 +1,28 @@
+<div class="post">
+  <div class="loading" v-if="loading">
+    Loading...
+  </div>
+
+  <div v-if="error" class="error">
+    {{ error }}
+  </div>
+
+  <div v-if="about">
+    <div class="banner" v-bind:style="{ background: 'url(' + about.coverImageUrl + ')' + 'no-repeat center center'}">
+      <div class="container">
+        <h1>Who Am I?</h1>
+      </div>
+    </div>
+    <div class="container">
+      <section>
+        <h2>{{about.title}}</h2>
+        <p>{{about.content}}</p>
+      </section>
+      <section>
+        <h2>{{about.secondaryTitle}}</h2>
+        <p>{{about.secondaryContent}}</p>
+      </section>
+    </div>
+
+  </div>
+</div>

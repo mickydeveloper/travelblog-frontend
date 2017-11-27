@@ -34,7 +34,6 @@ export default {
         this.loading = false
         this.posts = posts
         this.randomPost = Math.floor(Math.random() * (this.posts.length - 1) + 1)
-        console.log(this.randomPost)
       }, error => {
         this.error = error
       })
