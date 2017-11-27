@@ -1,5 +1,9 @@
 @import "../../assets/scss/banner.scss";
 
+.aos-wrapper {
+  overflow: hidden;
+}
+
 .post {
   margin-bottom: 3rem;
 
@@ -47,9 +51,5 @@
 
   h2 {
     margin: 0.5rem 0;
-  }
-
-  .aos-wrapper {
-    overflow: hidden;
   }
 }
